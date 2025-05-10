@@ -1,156 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-   
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=captive_portal" />
-   
 </head>
-
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <h1>Port<span>folio</span></h1>
-            </div>
-            <ul>
-                <li><a class="List" href="#">Home</a></li>
-                <li><a class="List" href="#About">About</a></li>
-                <li><a class="List" href="#Services">Services</a></li>
-                <li><a class="List" href="#My Works">My Work</a></li>
-                <li><a class="List" href="#Contact">Contact Us</a></li>
-            </ul>
-            <i id="bar" class="fa-solid fa-bars"></i>
+    <div class="calculator">
+        <input type="text" id="Display" readonly>
+        <div class="buttons">
+            <button class="button clearbtn" onclick="
+            currentValue =  '';
+            document.querySelector('#Display').value = currentValue;
+            ">c</button>
 
-        </nav>
-        <div class="main">
-            <div class="mainText">
-                <h3 class="Detail">Hello I am </h3>
-                <h1 class="Detail">Ajay <span>Kumar</span></h1>
-                <span class="Detail" id="animate"></span>
-                <div class="Detail" class="btn">
-                    <button id="cvbtn">DOWNLOD CV</button>
-                </div>
-            </div>
-            <img class="Ajay" src="Ajay.jpeg" alt="">
-        </div>
-        <div class="aboutus" id="About">
-            <div class="head">
-                <h1>About <span>Us</span></h1>
-            </div>
-            <div class="about">
-                <img src="Ajay.jpeg" alt="">
-                <div class="aboutText">
-                    <h2>Hello I am Fronted <Span>Developer</Span></h2>
-                    <p>Experience : <span>1 Years</span></p>
-                    <p>Speciality : <span>Website Development</span></p>
-                    <p>Skills : <span>C , C++ , HTML , CSS , JAVASCRIPT & REACT</span></p>
-                    <p>YouTuber : <span>Making Programming Videos</span></p>
-                    <p>Email Id  : <span>ajaykumar773947@gmail.com</span></p>
-                    <p> <span></span></p>
-                </div>
-            </div>
-        </div>
-        <div class="services" id="Services">
-            <div class="head">
-                <h1>Our <span>Services</span></h1>
-            </div>
-            <div class="service">
-                <div class="card">
-                    <img src="Android icon.svg" alt="">
-                    <h3>Android Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, esse.</p>
-                </div>
-                <div class="card">
-                    <img src="iphon icon.svg" alt="">
-                    <h3>App Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, esse.</p>
-                </div>
-                <div class="card">
-                    <img src="mobile icon.svg" alt="">
+            <button class="button" onclick="
+            currentValue = currentValue + '1';
+            document.querySelector('#Display').value = currentValue;
+            ">1</button>
 
-                    <h3>Website Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, esse.</p>
-                </div>
-            </div>
-        </div>
-        <div class="works" id="My Works">
-            <div class="head">
-                <h1>My <span>Works</span></h1>
-            </div>
-            <div class="Checkout">
-                <div class="workcard">
-                    <img src="YouTube Clone.png" alt="">
-                    <p>YouTube Clone</p>
-                    <a href="https://youtu.be/8DkocQwQQxU" target="_blank">Checkout</a>
-                </div>
-                <div class="workcard">
-                    <img src="coca cola.png" alt="">
-                    <p>Coca-Cola</p>
-                    <a href="https://youtu.be/1bynxHseuIw" target="_blank">Checkout</a>
-                </div>
-                <div class="workcard">
-                    <img src="login.jpeg" alt="">
-                    <p>Login Page</p>
-                    <a href="https://youtu.be/VWDehT2gWZs" target="_blank">Checkout</a>
-                </div>
-            </div>
-        </div>
-        <div class="connect" id="Contact">
-            <div class="head">
-                <h1>Contact <span>Us</span></h1>
-            </div>
-            <div class="contact">
-                <p>Email :</p>
-                <input type="text" placeholder="Enter the Email" id="Email">
-                <p>Password :</p>
-                <input type="password" placeholder="Enter the Password" id="pass">
-                <p>Message :</p>
-                <input type="text" placeholder="Enter the Message" id="msg">
-                <button id="submit">SUBMIT</button>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="text">
-                <h3>Contact Here</h3>
-                <p>YuoTube</p>
-                <p>Twittter</p>
-                <p>Instagram</p>
-                <p>Facebook</p>
-            </div>
-            <div class="text">
-                <h3>My Work</h3>
-                <p>Quality</p>
-                <p>Good</p>
-                <p>Best Price</p>
-                <p>Best</p>
-            </div>
-            <div class="text">
-                <h3>Effort</h3>
-                <p>Quality</p>
-                <p>Affortable</p>
-                <p>Good</p>
-                <p>Best Price</p>
-            </div>
-            <div class="text">
-                <h3>Contact</h3>
-                <p>Email</p>
-                <p>Message</p>
-                <p>Phone</p>
-                <p>9090-55-456</p>
-            </div>
+            <button class="button" onclick="
+            currentValue = currentValue + '2';
+            document.querySelector('#Display').value = currentValue;
+            ">2</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '+';
+            document.querySelector('#Display').value = currentValue;
+            ">+</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '3';
+            document.querySelector('#Display').value = currentValue;
+            ">3</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '4';
+            document.querySelector('#Display').value = currentValue;
+            ">4</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '-';
+            document.querySelector('#Display').value = currentValue;
+            ">-</button>
+            <button class="button" onclick="
+            currentValue = currentValue + '5';
+            document.querySelector('#Display').value = currentValue;
+            ">5</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '6';
+            document.querySelector('#Display').value = currentValue;
+            ">6</button>
+            <button class="button" onclick="
+            currentValue = currentValue + '*';
+            document.querySelector('#Display').value = currentValue;
+            ">*</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '7';
+            document.querySelector('#Display').value = currentValue;
+            ">7</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '8';
+            document.querySelector('#Display').value = currentValue;
+            ">8</button>
+            <button class="button" onclick="
+            currentValue = currentValue + '/';
+            document.querySelector('#Display').value = currentValue;
+            ">/</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '9';
+            document.querySelector('#Display').value = currentValue;
+            ">9</button>
+
+            <button class="button" onclick="
+            currentValue = currentValue + '0';
+            document.querySelector('#Display').value = currentValue;
+            ">0</button>
+            <button class="button" onclick="
+            currentValue = currentValue + '.';
+            document.querySelector('#Display').value = currentValue;
+            ">.</button>
+            <button class="button" onclick="
+            currentValue = currentValue + '%';
+            document.querySelector('#Display').value = currentValue;
+            ">%</button>
+            <button class="button equalbtn" onclick="
+            currentValue = eval(currentValue);
+            document.querySelector('#Display').value = currentValue;
+            "
+            >=</button>
+            
         </div>
     </div>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
-    integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="index.js"></script>
 </body>
-
 </html>
